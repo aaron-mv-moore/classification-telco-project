@@ -67,7 +67,7 @@ def split_data(df, target=None):
 
 def prep_telco(df, base_explore=True):
     '''
-    Arguments: cleaned telco df
+    Arguments: cleaned telco df, base_explore retains variables in a non-encoded format, useful for visualizations
     Actions:
         1. Creates a dataframe with only dummy variables, numerical variables, and the target
         2. Formats all the column titles for python usability
@@ -75,8 +75,10 @@ def prep_telco(df, base_explore=True):
     Return: train, validate, test
     '''
     
+    # default argument fo base_explore is True
     if base_explore == True:
-        
+
+        # skipe tha encoding of the variables
         pass
     
     else:
