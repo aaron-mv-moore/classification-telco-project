@@ -55,3 +55,12 @@
 1. Clone this repo
 2. Insert credentials in the blank_eny.py file and save
 3. Run notebook
+
+## Takeaways
+- Roughly 27% of customers churn
+- Churn drivers for churn include internet service type (specifically fiber optic), the lack of supplementary internet support services, and streaming services. 
+- The discovered drivers led to a successful model when only surpassing the baseline is used as a metric, but when incorporating false negative rates I consider all of the models a failure. 
+
+## Recommendations
+- Compile customer complaint data from emails, phone calls, and website submissions. This data can be used to increase awareness of what drives to churn.
+- Apply research-based retention strategies for customers with fiber optic internet. Fiber optic internet service had the highest churn rate out of all features. While specifics of what exactly causes this customer group to churn are not yet known, it is an area the requires customer retention efforts.
