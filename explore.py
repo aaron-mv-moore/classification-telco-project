@@ -347,3 +347,80 @@ def chi_squared_multiple(train, ls):
     # exit function 
     return
 
+def telco_streaming_services(train):
+    '''
+    This function creates a subplot of two variables of interest
+    Modules: string, matplotlib.pyplot as plt, seaborn as sns, pandas as pd
+    '''
+    
+    target = 'churn'
+    
+    # initializing variable for x axis
+    col = 'streaming_movies'
+    
+    # creating title/label friendly column by replacing the underscore and capitalizing all first letters
+    col_text = string.capwords(col.replace('_',' '))
+    
+    # assigning subplot position
+    plt.subplot(121)
+    
+    # creating a barplot with train data
+    sns.barplot(data=train,
+                
+                    # setting x axis to the variable previously initialized
+                    x=train[col], 
+                    
+                    # setting y axis to the target
+                    y=target)
+    
+    # setting the overall average churn rate as a horizontal line in the graphs
+    plt.axhline(train[target].mean(), c='r')
+    
+    # inserting the title
+    plt.title(f'{col_text}\n{target.capitalize()} Barplot')
+    
+    # labeling the x axis
+    plt.xlabel(f'{col_text}')
+    
+    # labeling the y axis
+    plt.ylabel(target.capitalize())
+    
+    # initializing variable for x axis
+    col2 = 'streaming_tv'
+    
+    # creating title/label friendly column by replacing the underscore and capitalizing all first letters
+    col2_text = string.capwords(col2.replace('_',' '))
+    
+    # assigning subplot position
+    plt.subplot(122)
+    
+    # creating a barplot with train data
+    sns.barplot(data=train,
+                
+                    # setting x axis to the variable previously initialized
+                    x=train[col2], 
+                    
+                    # setting y axis to the target
+                    y=target)
+    
+    # setting the overall average churn rate as a horizontal line in the graphs
+    plt.axhline(train[target].mean(), c='r')
+    
+    # inserting the title
+    plt.title(f'{col2_text}\n{target.capitalize()} Barplot')    
+    
+     # labeling the x axis
+    plt.xlabel(f'{col_text}')
+    
+    # labeling the y axis
+    plt.ylabel(target.capitalize())
+    
+    # formating the subplots to reduce overlap
+    plt.tight_layout()
+
+    # showing all plaots
+    plt.show()
+    
+    # exit function
+    return
+

@@ -26,6 +26,9 @@ def clean_telco(df):
     
     # Drop unnecessary columns that have '_id'
     df = df.drop(columns=id_cols_drop)
+
+    # reducing unneccesary words
+    df = df.replace('No internet service', 'No Internet')
     
     # Convert columns data type from object to float
     df['total_charges'] = (df['total_charges'] + '0').astype(float)
@@ -78,7 +81,8 @@ def prep_telco(df, base_explore=True):
     # default argument fo base_explore is True
     if base_explore == True:
 
-        # skipe tha encoding of the variables
+        
+        # skip the encoding of the variables
         pass
     
     else:
