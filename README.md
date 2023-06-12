@@ -1,4 +1,4 @@
-# Churn: The Road to Low False Negatives and High True Gains
+# [Churn: The Road to Low False Negatives and High True Gains](https://public.tableau.com/app/profile/aaronmvmoore/viz/DataStorytelling-Telco/TelcoChurn)
 
 ## Project Description
 - This project is the first project in the data science methodologies course. It will go through the data science pipeline and attempt to discover why customers are churning at Telco. This project is important for two reasons:
